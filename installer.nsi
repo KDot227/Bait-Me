@@ -45,7 +45,7 @@ Section "Install"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "UninstallString" "$INSTDIR\Uninstall.exe"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "InstallLocation" "$INSTDIR"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "DisplayIcon" "$INSTDIR\Bait-Me.exe"
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "Publisher" "Your Company Name"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "Publisher" "KDot227"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "DisplayVersion" "1.0"
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "NoModify" 1
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me" "NoRepair" 1
