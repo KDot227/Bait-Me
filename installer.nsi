@@ -1,8 +1,9 @@
+;This is 100% AI generated if you couldn't tell
 ; Define the name of the installer and the output file
 OutFile "Bait-Me-Installer.exe"
 
 ; Define the icon for the installer
-Icon "icon.ico"
+Icon "Bait-Me.exe"
 
 ; Define the installation directory
 InstallDir "$PROGRAMFILES\Bait-Me"
@@ -12,7 +13,7 @@ RequestExecutionLevel admin
 
 ; Define the uninstaller
 UninstallText "This will uninstall Bait-Me."
-UninstallIcon "icon.ico"
+UninstallIcon "Bait-Me.exe"
 
 ; Define the sections for installation and uninstallation
 Section "Install"
@@ -36,6 +37,9 @@ Section "Install"
   ; Create a shortcut in the Start Menu
   CreateDirectory "$SMPROGRAMS\Bait-Me"
   CreateShortCut "$SMPROGRAMS\Bait-Me\Bait-Me.lnk" "$INSTDIR\Bait-Me.exe" "" "$INSTDIR\Bait-Me.exe"
+
+  ; Create a shortcut on the desktop
+  CreateShortCut "$DESKTOP\Bait-Me.lnk" "$INSTDIR\Bait-Me.exe" "" "$INSTDIR\Bait-Me.exe"
 
   ; Write the uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
@@ -94,6 +98,9 @@ Section "Uninstall"
   ; Delete the Start Menu folder and shortcut
   Delete "$SMPROGRAMS\Bait-Me\Bait-Me.lnk"
   RMDir "$SMPROGRAMS\Bait-Me"
+
+  ; Delete the desktop shortcut
+  Delete "$DESKTOP\Bait-Me.lnk"
 
   ; Remove registry entries
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Bait-Me"
