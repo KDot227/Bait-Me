@@ -3,7 +3,7 @@
 OutFile "Bait-Me-Installer.exe"
 
 ; Define the icon for the installer
-Icon "Bait-Me.exe"
+Icon "icon.ico"
 
 ; Define the installation directory
 InstallDir "$PROGRAMFILES\Bait-Me"
@@ -13,7 +13,7 @@ RequestExecutionLevel admin
 
 ; Define the uninstaller
 UninstallText "This will uninstall Bait-Me."
-UninstallIcon "Bait-Me.exe"
+UninstallIcon "icon.ico"
 
 ; Define the sections for installation and uninstallation
 Section "Install"
