@@ -15,6 +15,8 @@ if not exist %file_path% (
 
 pushd src\app
 
+go mod tidy
+
 if "%1" == "release" (
     go build -ldflags "-s -w" -o ..\..\%file_path%\Bait-Me.exe .
 ) else (
